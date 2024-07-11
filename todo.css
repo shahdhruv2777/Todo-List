@@ -1,0 +1,137 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333333;
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+  }
+  
+  #add-task-button {
+    background-color: #28a745;
+  }
+  
+  #add-task-button:hover {
+    background-color: #218838;
+  }
+  
+  #add-task-button:active {
+    transform: scale(0.95);
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ced4da;
+    transition: background-color 0.3s ease;
+  }
+  
+  li:hover {
+    background-color: #f8f9fa;
+  }
+  
+  li.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+  }
+  
+  li button {
+    margin-left: 10px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+  }
+  
+  li .delete-button {
+    background-color: #dc3545;
+  }
+  
+  li .delete-button:hover {
+    background-color: #c82333;
+  }
+  
+  li .toggle-completion {
+    background-color: #007bff;
+  }
+  
+  li .toggle-completion:hover {
+    background-color: #0056b3;
+  }
+  
+  li .edit-button {
+    background-color: #ffc107;
+  }
+  
+  li .edit-button:hover {
+    background-color: #e0a800;
+  }
+  
+  li .delete-button:active,
+  li .toggle-completion:active,
+  li .edit-button:active {
+    transform: scale(0.95);
+  }
+  
+  @media (max-width: 500px) {
+    .input-container {
+      flex-direction: column;
+    }
+  
+    input[type="text"] {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
